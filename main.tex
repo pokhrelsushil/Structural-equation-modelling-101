@@ -47,10 +47,11 @@ Small modular reactors, control room, situational awareness, trust in automation
 
 Small Modular Reactors (SMRs) are poised to transform the nuclear energy landscape, offering scalable power generation with enhanced safety features and a high degree of automation \cite{iaea2020advances, inl2020smr, nrc2016human, oecd2016technical}. These technological advances, however, introduce new Human Factors Engineering (HFE) challenges in control room operation \cite{nrc2016human, nuclear2024analysis, oecd2016technical, iapsam2022human}. SMR control rooms are typically fully digital, may oversee multiple reactor modules from a single workstation, and rely on advanced automation and decision support systems \cite{oecd2016technical, iapsam2022human, taylor2025small, pmc2021effects}. Operators in such environments are expected to maintain high situational awareness while monitoring parallel processes, manage workload effectively despite reduced staffing, and trust automated systems to function as reliable teammates in controlling the plant \cite{taylor2025small, pmc2021effects, sciencedirect2015measuring, pubmed2024human}. Human–machine teaming in this context requires careful consideration of cognitive factors: an operator’s real-time understanding of plant state (situational awareness), their mental workload under various operating conditions, and their trust in the automation and interface design \cite{sciencedirect2015measuring, pubmed2024human, sage1995toward, sciencedirect2015situation}. These factors are interrelated; for example, excessive workload or poorly calibrated trust can erode situational awareness and degrade decision-making \cite{sage1995toward, sciencedirect2015situation, sage2004trust, taylor2025small}.
 
+
 Prior research highlights that situational awareness (SA) is critical for nuclear power plant operations, and interface design plays a key role in supporting SA \cite{sciencedirect2025structural, iop2022analysis, cms2024human, taylor1995situation}. Endsley’s model of SA defines it as the perception of key elements, comprehension of their meaning, and projection of future status in a dynamic system \cite{sage1995toward, taylor1995situation, sciencedirect2025structural, iop2022analysis}. In SMRs, maintaining SA is challenging when one operator supervises multiple systems with high automation; important cues might be missed if interface alerts or layouts are suboptimal \cite{cms2024human, sciencedirect2015measuring, nrc2016human, oecd2016technical}. Workload is another central HFE concern—operators face potentially higher cognitive workload in SMR main control rooms due to information-dense displays and multitasking demands \cite{nuclear2024analysis, pubmed2024effects, sciencedirect2015situation, oecd2016technical}. Unmanaged workload can lead to fatigue or error, thus quantifying workload and its predictors is essential \cite{sciencedirect2015situation, nuclear2024analysis, pubmed2024effects, taylor1995situation}. Trust in automation is the third key factor: operators must trust automated safety systems and alarms to function correctly, but not over-rely on them \cite{sage2004trust, taylor2025small, sage1997trust, researchgate2012human}. Trust influences how operators delegate tasks to automation and how they maintain engagement; inappropriate trust (either too low or too high) can diminish overall system performance \cite{sage1997trust, progress2023automation, sage2004trust, sage2010trust}. Lee and See famously noted that designing for appropriate trust in automation is as important as the reliability of the automation itself \cite{sage2004trust, researchgate2012human, taylor2025small, sage1997trust}. While these constructs—SA, workload, and trust—have been studied qualitatively and experimentally in conventional nuclear plants \cite{oecd2016technical, nrc2016human, iapsam2022human}, quantitative modeling of their interrelationships in an SMR context remains limited \cite{nuclear2024analysis, taylor1995situation, reliability2019structural, taylor2023structural}. In particular, there is a lack of research applying advanced multivariate techniques to understand how operator interface perceptions and cognitive states interact \cite{reliability2019structural, taylor2023structural, taylor1999cutoff, guilford2016principles}.
 
 To fill this gap, we conducted a survey of control-room operators and nuclear domain experts, focusing on their interface design preferences, situational awareness, workload, and trust in automation \cite{nrc2016human, sciencedirect2025structural, nuclear2024analysis, oecd2016technical, iapsam2022human, revistanuclear2020licenciamiento, mdpi2025small, nrc2015smr}. Rather than analyze responses with simple descriptive statistics, we employ Structural Equation Modeling (SEM) to extract latent factors for each construct and test hypothesized relationships among them \cite{guilford2016principles, sciencedirect2021human, pmc2010neurophysiological, reliability2017structural, researchgate2002structural}. By using SEM, we can rigorously validate that our survey items indeed measure the intended psychological constructs (measurement model) and then examine the directional influences among these constructs (structural model) in a single, integrated analysis \cite{taylor1999cutoff, sciencedirect2025structural, pmc2010neurophysiological, frontiers2022closed, reliability2017structural}. Moreover, because human operator behavior varies widely, we extend the analysis with a stochastic SEM approach \cite{springer2002beyond, pmc2021influence, taylor2023structural, springer2025stochastic, researchgate2010optimal, mdpi2020functional}. Traditional SEM typically estimates average relationships (“deterministic” in the sense that it assumes one set of parameters applies to all individuals). In contrast, a stochastic or multilevel SEM allows certain parameters to vary across individuals or subpopulations, acknowledging that not all operators respond to interface design in the same way.
-
+Process : 
 We implement this via a finite mixture SEM (latent class analysis), which can identify latent subgroups of operators with different relationship patterns (for example, one subgroup might exhibit very strong trust→SA effects while another shows weaker effects, perhaps due to differing experience or personality) \cite{springer2002beyond, pmc2021influence, taylor2023structural, springer2025stochastic, researchgate2010optimal, mdpi2020functional, mdpi2023uav, nature2025situational, harvard2025paper}. This approach is novel in the nuclear domain, where sample sizes are often small and individual differences are sometimes overlooked \cite{nuclear2024analysis, taylor2023structural, frontiers2022closed, reliability2017structural, researchgate2002structural, mdpi2023mathematical}. By modeling random variance components, we aim to capture inherent human variability and evolving operator preferences, aligning with the notion that any human–machine teaming model must accommodate a degree of unpredictability in human behavior \cite{sciencedirect2015situation, sciencedirect2015measuring, pubmed2024effects, sage1995toward, researchgate2010optimal, mdpi2020functional, reddit2025solving, pmc2023effects, mdpi2023algorithms, openreview2025review}.
 
 The objectives of this study are therefore: (1) to define latent variables for key cognitive constructs (situational awareness, workload) and operator attitudes (trust in automation) based on our SMR control room survey \cite{nrc2016human, sciencedirect2025structural, nuclear2024analysis, oecd2016technical, iapsam2022human, revistanuclear2020licenciamiento, mdpi2025small, nrc2015smr, ijnscfrt2024analysis, researchgate2023human}; (2) to specify and confirm a measurement model linking these latent variables to their observed survey indicators \cite{taylor1999cutoff, guilford2016principles, taylor2023structural, frontiers2022closed, reliability2017structural, researchgate2002structural, mdpi2023mathematical, sciencedirect2024data, nature2025situational}; (3) to formulate a structural model testing hypothesized relationships among the latent constructs (specifically, that trust in automation positively affects situational awareness, and that situational awareness in turn reduces perceived workload) \cite{sage2004trust, sage1995toward, sage1997trust, taylor2025small, sage2010trust, researchgate2010optimal, mdpi2020functional, reddit2025solving, pmc2023effects, mdpi2023algorithms, openreview2025review}; and (4) to estimate an extended stochastic SEM that incorporates random effects or latent classes to account for person-to-person differences in these relationships \cite{springer2002beyond, pmc2021influence, taylor2023structural, springer2025stochastic, researchgate2010optimal, mdpi2020functional, reddit2025solving, pmc2023effects, mdpi2023algorithms, openreview2025review}. By achieving these aims, we hope to demonstrate a rigorous analytical methodology and reveal insights that can guide the design of adaptive interfaces and training for SMR control rooms \cite{sciencedirect2025structural, cms2024human, sciencedirect2015situation, taylor2025small, researchgate2023human, ijnscfrt2024analysis, nrc2015smr, stralsakerhets2018structural, frontiers2022closed, researchgate2002structural, sciencedirect2024data, nature2025situational, harvard2025paper, researchgate2023review, mdpi2023mathematical}.
@@ -61,7 +62,7 @@ The results have implications for improving human–machine teaming, as adaptive
 \section{Methodology}
 
 \subsection{Participants and Data Collection}
-The study collected data from N = 30 nuclear industry professionals, including licensed reactor operators, senior operators, and control-room supervisors. Although the sample size is modest (a common situation in nuclear domain studies due to limited expert availability), it is sufficient for an exploratory SEM given our model’s simplicity and the use of robust estimation techniques \cite{taylor1999cutoff}. Participants were recruited through industry partnerships and had experience ranging from junior operators (< 3 years in control room roles) to veterans (> 15 years). All participants were familiar with advanced nuclear plant interfaces; about one-third had direct exposure to SMR or advanced reactor control simulations, while others had conventional large reactor backgrounds. The survey was administered online via Qualtrics, under ethics approval [#Protocol ID] obtained through the university’s institutional review board. Informed consent was obtained, and the survey was anonymous to encourage candid responses. Prior to the full survey, a pilot study with 5 operators was conducted to refine items and ensure clarity, enhancing content validity. The survey instrument was developed to cover multiple constructs relevant to SMR control room human performance. In particular, we designed sections to assess: (1) Situational Awareness (SA) – using self-ratings and scenario-based questions adapted from situational awareness rating techniques \cite{sage1995toward}; (2) Workload (WL) – using questions informed by the NASA-TLX dimensions (modified for control-room context) and subjective workload assessment queries; (3) Trust in Automation (TR) – using items that probe the operator’s confidence in automated systems, alarm reliability, and the transparency of automation. Additionally, sections on interface design preferences (layout, color coding, alarms, etc.) and vigilance/monitoring were included to provide context and potential covariates, but for the core analysis presented here we focus on the three primary latent constructs (SA, WL, TR) and their interrelations. This focus was chosen to maintain parsimony and statistical power, as including too many latent factors with N=30 could overextend the data.
+The study collected online data from nuclear industry professionals, including licensed reactor operators, senior operators, and control-room supervisors. Although the sample size is modest (a common situation in nuclear domain studies due to limited expert availability), it is sufficient for an exploratory SEM given our model’s simplicity and the use of robust estimation techniques \cite{taylor1999cutoff}. Participants were recruited through industry partnerships and had experience ranging from junior operators (< 3 years in control room roles) to veterans (> 15 years). All participants were familiar with advanced nuclear plant interfaces; about one-third had direct exposure to SMR or advanced reactor control simulations, while others had conventional large reactor backgrounds. The survey was administered online via Qualtrics, under ethics approval [#Protocol ID] obtained through the university’s institutional review board. Informed consent was obtained, and the survey was anonymous to encourage candid responses. Prior to the full survey, a pilot study with 5 operators was conducted to refine items and ensure clarity, enhancing content validity. The survey instrument was developed to cover multiple constructs relevant to SMR control room human performance. In particular, we designed sections to assess: (1) Situational Awareness (SA) – using self-ratings and scenario-based questions adapted from situational awareness rating techniques \cite{sage1995toward}; (2) Workload (WL) – using questions informed by the NASA-TLX dimensions (modified for control-room context) and subjective workload assessment queries; (3) Trust in Automation (TR) – using items that probe the operator’s confidence in automated systems, alarm reliability, and the transparency of automation. Additionally, sections on interface design preferences (layout, color coding, alarms, etc.) and vigilance/monitoring were included to provide context and potential covariates, but for the core analysis presented here we focus on the three primary latent constructs (SA, WL, TR) and their interrelations. This focus was chosen to maintain parsimony and statistical power, as including too many latent factors with N=30 could overextend the data.
 
 \subsection{Measures and Latent Variable Operationalization}
 \textbf{Situational Awareness (SA):} \\
@@ -178,6 +179,7 @@ TRUST & Inter-item $r$      & 0.285 \\
 \end{tabular}
 \end{table}
 
+
 \begin{table}[h]
 \centering
 \caption{Structural Paths (Standardized Composites) and $R^2$}
@@ -199,22 +201,31 @@ $R^2_{\text{WL}}$ & 0.086 & Variance in WL explained by SA \\
 \end{table}
 \begin{table}[h]
 
-\caption{\textbf{Factor Loadings and Reliability Statistics}}
+                   \caption{\textbf{Factor Loadings and Reliability Statistics}}
 
 \begin{tabular}{lccc}
+
 \toprule
-Indicator & Latent Factor & Loading (λ) & CR/AVE \\
+Indicator & Latent Factor & Loading (\textbf{λ}) & CR/AVE \\
 
 \midrule
 SA-Noticing & SA & 0.75 
 & \multirow{5}{*}{0.85 / 0.55} \\
+
 SA-Speed & SA & 0.62 & \\
+
 SA-Interpretation & SA & 0.88 & \\
+
 SA-EmergencyUnderstanding & SA & 0.80 & \\
+
 SA-Projection & SA & 0.76 & \\
+
 WL-Demand & WL & 0.82 & \multirow{3}{*}{0.80 / 0.58} \\
+
 WL-DesignHelp & WL & 0.77 & \\
+
 WL-InterfaceIssues & WL & 0.74 & \\
+
 TR-Accuracy & TR & 0.90 (fixed) & \multirow{2}{*}{0.75 / 0.65} \\
 TR-AlarmReliability & TR & 0.72 & \\
 \bottomrule
@@ -255,6 +266,7 @@ The 2-class solution had a lower BIC (by 4 points), entropy = 0.82. Class 1 (67%
 
 \section{Discussion}:  
 The results support a cognitive relationship model in SMR operations: trust drives SA, which reduces WL. This aligns with Endsley’s SA model and Lee & See’s trust framework. Design implications include transparent interfaces (e.g., trend graphs and SA-support tools). The mixture analysis suggests adaptive training for low-trust operators, potentially using scenario-based exercises. Compared to O’Hara et al, our quantitative approach reveals subgroup dynamics absent in qualitative analyses. Limitations include a small sample size and self-reported data. Future work should integrate eye-tracking measures.  
+
 \subsection{Measurement Model Fit and Parameters}
 The initial CFA showed an acceptable fit: χ²(24) ≈ 26.3 (p = .33), CFI = 0.985, TLI = 0.978, RMSEA = 0.048 (90\% CI [0.00, 0.10]), SRMR = 0.065. Factor loadings were strong (all >0.60), supporting convergent validity. Composite reliability (CR) exceeded 0.70 for all factors, and average variance extracted (AVE) >0.50, indicating good reliability. \\ \\ \\\\
 \\
@@ -275,10 +287,10 @@ The initial CFA showed an acceptable fit: χ²(24) ≈ 26.3 (p = .33), CFI = 0.9
 \\
 \\
 \\
-
+\\
 Discriminant validity was confirmed as AVE exceeded squared inter-factor correlations.
 
-\begin{table*}[t] 
+\begin{table*}[t]  
 \caption{Factor Loadings and Reliability Statistics}
 \centering
 \begin{tabular}{lccc}
@@ -448,13 +460,25 @@ This study validates SEM for SMR teaming, highlighting trust-SA-WL dynamics. Ada
 
 
 \\
+\\
+\\
+\\
+\\
+\\
+\\
 
-\begin{thebibliography}{54}\\
+\begin{thebibliography}{54}\\ \\\\
+
 
 \\
 \\
 
 \bibitem{iaea2020advances}\\
+\\
+\\
+
+\\
+\\
 
 International Atomic Energy Agency, ``Advances in Small Modular Reactor Technology Developments,'' IAEA, 2020. \href{https://doi.org/10.1016/j.nucengdes.2020.110753}{DOI: 10.1016/j.nucengdes.2020.110753}.
 
